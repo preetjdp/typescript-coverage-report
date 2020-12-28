@@ -1,0 +1,38 @@
+name: "Typescript Coverage Report"
+author: "Preet Parekh <preetjdpdev@gmail.com>"
+description: "Github Actin for generating TypeScript coverage reports"
+branding:
+  icon: "search"
+  color: "orange"
+inputs:
+  name:
+    description: |
+      The name of the check ("Typescript Coverage Report" by default).
+      In case of multiple Typescript Coverage Report Actions, use `name` to prevent GitHub from overwriting results.
+      For example, "Check Public API" and "Check Internal API".
+  # annotations:
+  #   description: "Use annotation (enabled by default)"
+  # fail-on-breaking:
+  #   description: "Fail on breaking changes (enabled by default)"
+  # schema:
+  #   description: |
+  #     Ref and Path to GraphQL Schema (e.g. "master:schema.graphql")
+  #     * Ref is needed where 'endpoint' is not defined
+  #   required: true
+  # endpoint:
+  #   description: |
+  #     Url to your GraphQL API
+  #     When using an endpoint, 'schema' should point to a file (without a reference - branch name for example)
+  github-token:
+    description: "Github Token"
+  # experimental_merge:
+  #   description: |
+  #     Merge Pull Request's branch with the target branch to get the schema.
+  #     Helps to get the correct state of schema when Pull Request is behind the target branch
+  #     (disabled by default)
+# outputs:
+#   changes:
+#     description: "Total number of changes"
+runs:
+  using: "node12"
+  main: "action/index.js"

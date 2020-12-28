@@ -11,8 +11,12 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@actions/core": "1.2.6",
+    "@actions/github": "4.0.0",
+    "@octokit/rest": "18.0.12",
     "colors": "^1.4.0",
     "commander": "^5.0.0",
+    "markdown-table": "2.0.0",
     "ncp": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -28,7 +32,8 @@
     "type-coverage": "node ./dist/bin/typescript-coverage-report",
     "docs": "yarn type-coverage --outputDir docs",
     "prepublish": "yarn lint && yarn build",
-    "release": "gren release"
+    "release": "gren release",
+    "action": "ncc build action/index.ts --out action --minify --transpile-only"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -39,6 +44,7 @@
     "@commitlint/config-conventional": "^8.3.4",
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.4",
+    "@types/markdown-table": "2.0.0",
     "@types/ncp": "^2.0.3",
     "@types/node": "^13.9.2",
     "@types/react": "^16.9.23",
@@ -46,6 +52,7 @@
     "@types/testing-library__react": "^9.1.3",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "@zeit/ncc": "0.22.3",
     "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",

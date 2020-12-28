@@ -8,6 +8,9 @@ import { ncp } from "ncp";
 import { promisify } from "util";
 import rimraf from "rimraf";
 
+import { helloHI } from "./testFile"
+helloHI()
+
 const asyncNcp = promisify(ncp);
 
 export type ProgramOptions = Options & {

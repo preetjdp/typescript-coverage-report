@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "outDir": "dist",
+    "allowJs": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -11,5 +12,5 @@
     "inlineSourceMap": true,
     "jsx": "react"
   },
-  "exclude": ["**/__tests__/*.test.ts?x"]
+  "exclude": ["**/__tests__/*.test.ts?x", "**/action/"]
 }
